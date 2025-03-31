@@ -1,0 +1,172 @@
+<html>
+
+<head>
+    <title>Debt Advice Agency Finder</title>
+    <!-- font links -->
+    <!--link rel="stylesheet" href="style.css"-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+    <!-- icon links -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- W3 CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    
+    <script>
+
+        function search_query(search) {
+          let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_community_and_safety/MapServer/18/query?where=1%3D1&outFields=LOCATION_NAME,FULL_ADDRESS,UPRN,STREET,POSTCODE,DROP_IN_SESSIONS,SERVICE_NAME,TELEPHONE,EMAIL,NOTES&outSR=4326&f=json"
+          fetch(url,{ method: "GET", headers: { Accept: "application/json"}})
+          .then(res => res.json())
+          .then(outputTable);
+        }
+
+        function query(){
+          let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_community_and_safety/MapServer/18/query?where=1%3D1&outFields=LOCATION_NAME,FULL_ADDRESS,SERVICE_NAME,TELEPHONE,EMAIL&outSR=4326&f=json"
+          fetch(url, {
+              method: 'GET',
+              headers: { 'Accept': 'application/json' },
+          })
+          .then (response => response.json())
+          .then(outputTable);
+        }
+
+        function filter (e) {
+            document.getElementsByClassName("w3-bar-item");
+            for (i in items) {
+
+            }
+            e.classList.add("w3-grey");
+            let encoded = encodeURIComponent(value);
+            let url = 
+            fetch(url,{ method: "GET", headers: { Accept: "application/json"} })
+            .then(res=>res.json())
+            .then(outputTable);
+        }
+
+        function outputTable(json){
+            var results = document.getElementById("results");
+            results.innerHTML = "";
+            var f = json.features;
+            for (var i = 0; i < f.length; i++) {
+                var tr = document.createElement("tr");
+                tr.setAttribute("id", "citzen")
+                results.appendChild(tr);
+                var td = document.createElement("td");
+                tr.appendChild(td);
+                td.innerHTML = json.feautures[i].attributes.LOCATION_NAME ;
+                var td1 = document.createElement("td1");
+                tr.appendChild(td1);
+                td.innerHTML = json.feautures[i].attributes.FULL_ADDRESS ;
+                var td2 = document.createElement("td2");
+                tr.appendChild(td2);
+                td.innerHTML = json.feautures[i].attributes.SERVICE_NAME ;
+                var td3 = document.createElement("td3");
+                tr.appendChild(td3);
+                td.innerHTML = json.feautures[i].attributes.TELEPHONE ;
+                var td4 = document.createElement("td4");
+                tr.appendChild(td4);
+                td.innerHTML = json.feautures[i].attributes.EMAIL ;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+      <header>
+        <span class="heading">Debt Advice Agency Finder</span>
+        <form id="search" action="toc.html">
+            <input placeholder="search...">
+            <button><i class="fa fa-search"></i></button>
+        </form>
+      </header>
+
+        <nav>
+          <button onclick=" location.href='' " class="w3-bar-item w3-button w3-block w3-black w3-border w3-border-white">Find Data By: </button>
+          <button onclick=" location.href='map.html' " class="w3-button w3-block w3-purple w3-border w3-border-white">Maps &amp; Directions</button>
+          <button onclick=" location.href='prototype.html' " class="w3-button w3-block w3-purple w3-border w3-border-white">Table of Content</button>
+        </nav>
+
+        <main id="single" show="third">
+              <div id="first"> 
+                <div class="w3-bar">
+                  <button class="w3-block w3-purple w3-bar-item w3-button w3-border">Postcode</button>
+                  <button onclick="document.getElementById('single').setAttribute('show','second')" class="w3-bar-item w3-button w3-border">My Account</button>
+                </div>
+                <div id="button-container">
+                  <button class="w3-button w3-border w3-right">Apply filters</button>
+                </div>
+                <div id="Postcode">
+                  <iframe src="https://arcg.is/1j11ae2" width="800" height="600" frameborder="200" ></iframe>
+                </div>
+              </div>
+      
+              <div id="second">
+                <div class="w3-bar">
+                  <button onclick="document.getElementById('single').setAttribute('show','first')" class="w3-bar-item w3-button w3-border">Postcode</button>
+                  <button class="w3-bar w3-purple w3-bar-item w3-button w3-border">My Account</button>
+                </div>
+                <div id="button-container">
+                  <button class="w3-button w3-border w3-right">Apply filters</button>
+                </div>
+                <div id="My Account">
+                            
+                  <div class="pro-container">
+                    <!--Profile section-->
+                    <div class="profile">
+                      <img src=" " alt="Profile Image">
+                      <div class="profile-info">
+                        <h2>Kent Brighton</h2>
+                        <p>Email: kentbrighton@agency.com</p>
+                        <p>Phone number: 0000000001</p>
+                      </div>
+                    </div>
+                    
+                    <!--Bookmark Section-->
+                    <div class="section">
+                      <h3>BOOKMARKS</h3>
+                      <iframe src="https://arcg.is/0CjbqS1" width="800" height="230" frameborder="200"></iframe>
+      
+                      <ul class="book-list" id="bookmarkList">
+                        <li>Hattun Agency <button onclick="removeBookmark(this)">Remove</button> </li>
+                        <li>Icon Agency <button onclick="removeBoockmark(this)">Remove</button> </li>
+                      </ul>
+                      <button class="add-btn" onclick="addBookmark()"> +Add Bookmark</button>
+                    </div>
+      
+                    <!--Notes Section-->
+                    <div class="section">
+                      <h3>NOTES</h3>
+                      <textarea class="notes" id="userNotes" rows="4" cols="50" placeholder="Write your notes here..."></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="third">
+                  <div class="w3-bar">
+                    <button onclick="document.getElementById('single').setAttribute('show','first')" class="w3-bar-item w3-button w3-border">Postcode</button>
+                    <button onclick="document.getElementById('single').setAttribute('show','second')" class="w3-bar-item w3-button w3-border">My Account</button>
+                  </div>
+                  <div id="Table of Content">
+                    <table class="w3-table w3-bordered" style="width: 700px; height: 600px; border: 1px solid black;">
+                      <thead>
+                        <th>Location Name</th><th>Full Address</th><th>Service Name</th><th>Telephone</th><th>Email</th>
+                      </thead>
+                      <tbody id="results">
+                      </tbody>
+                    </table>
+                    <script>
+                      query();
+                    </script>
+                  </div>
+              </div>
+            </main>
+    </div>
+    
+</body>
+
+</html>
+
