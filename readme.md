@@ -2,19 +2,18 @@
 
 
 ### Brief Outline of the Project
-The Debt Advice Agencies Finder is a platform designed to aid users in locating accredited and reliable debt advice agencies based in Bristol, and on preferences and their specific needs. The website provides a user-friendly interface for browsing and viewing detailed agency information, accessing to the contact details,and serves as a shortcut/note-taking site so that the users can easily bookmark and reference their ideas. The aim is to empower individuals struggling with financial issues by connecting them to relevant and qualified agencies that can provide professional assistance.
+The Debt Advice Agencies Finder is a platform designed to aid users in locating accredited and reliable debt advice agencies based in Bristol, and on preferences and their specific needs. The website provides a user-friendly interface for browsing and viewing detailed agency information, and accessing the contact details, and serves as a shortcut/note-taking site so that the users can easily bookmark and reference their ideas. The aim is to empower individuals struggling with financial issues by connecting them to relevant and qualified agencies that can provide professional assistance.
 
 ### Dataset Description
 The project is based on a dataset that contains comprehensive information about debt advice agencies. This includes:
 - Agency Name
 - Contact Details(email, phone number, and website)
 - Address
-- Services Provided (e.g., budgeting advice, debt consolidation, bankruptcy counseling)
+- Services Provided (e.g., budgeting advice, debt consolidation, bankruptcy counselling)
 - Geographic Coverage (regional, local or national)
 - Reviews or Ratings (if available)
 
 
-//Just a note that this would be the OPEN GOV stuff
 **Dataset Link:** [Debt Advice Agencies Dataset](https://opendata.bristol.gov.uk/datasets/8f9e6b1a6f23410ea61bda8febc1a17a_18/explore)
 
 
