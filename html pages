@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<meta charset="UTF-8"> <meta name="Viewport">
+<html>
+<head>
+<title>Log In</title>
+<link rel="stylesheet" href="Login.css">
+</head>
+<body>
+<!-- Log in page-->
+    <h1>Log In</h1>
+    
+    <div class="container">
+            <input type="text"
+            placeholder="Username"
+            class="form-control"
+            required>
+        </div>
+        
+        <div class="container">
+                <input type="password"
+                placeholder="Password"
+                class="form-control"
+                required>
+    
+        </div>
+      
+<button class="pill" id="Log in" type="button"><a href="" >Log in</a></button>
+
+<!-- Admin login page-->
+<h1>Log In as Admin</h1>
+    
+    <div class="container">
+            <input type="text"
+            placeholder="Username"
+            class="form-control"
+            required>
+        </div>
+        
+        <div class="container">
+                <input type="password"
+                placeholder="Password"
+                class="form-control"
+                required>
+    
+        </div>
+        <button class="pill" id="Log in" type="button"><a href="" >Log in</a></button>
+<!-- Sign up page-->
+<h1>Sign Up</h1>
+    
+    <div class="container">
+            <input type="text"
+            placeholder="Name"
+            class="form-control"
+            required>
+        </div>
+        
+        <div class="container">
+                <input type="email"
+                placeholder="example@mail.com"
+                class="form-control"
+                required>
+    
+        </div>
+       
+        <div class="container">
+                <input type="text"
+                placeholder="Phone number"
+                class="form-control"
+                required>
+        </div> 
+        
+        <div class="container">
+            <input type="text"
+            placeholder="Postcode"
+            class="form-control"
+            required>
+        </div>       
+        
+        <div class="container">
+                    <input type="text"
+                    placeholder="Username"
+                    class="form-control"
+                    required>
+                </div>
+                
+                <div class="container">
+                        <input type="password"
+                        placeholder="Password"
+                        class="form-control"
+                        required>
+        </div>
+        <button class="pill" id="Sign up" type="button"><a href="" >Sign up</a></button>
+
+<!--My account page-->
+<h1>My Account</h1>
+
+<button class="pill" id="AccSet" type="button"><a href="AccountSettings.html" >Account settings</a></button>
+<button class="pill" id="MyDetails" type="button"><a href="MyDetails.html" >My Details</a></button>
+<button class="pill" id="Profile" type="button"><a href="LogIn.html">Log Out</a></button>
+<h1>Account Settings</h1>
+
+<button class="pill" id="Profile" type="button"><a>Profile</a></button>
+<button class="pill" id="Theme" type="button"><a>Theme</a></button>
+
+<!-- My details page -->
+
+<h1>My Details</h1>
+
+<div class="container">
+    <input type="text"
+    placeholder="Name"
+    class="form-control"
+    required>
+</div>
+
+<div class="container">
+        <input type="email"
+        placeholder="example@mail.com"
+        class="form-control"
+        required>
+
+</div>
+
+<div class="container">
+        <input type="text"
+        placeholder="Phone number"
+        class="form-control"
+        required>
+</div> 
+
+<div class="container">
+    <input type="text"
+    placeholder="Postcode"
+    class="form-control"
+    required>
+</div>       
+
+<div class="container">
+            <input type="text"
+            placeholder="Username"
+            class="form-control"
+            required>
+        </div>
+        
+        <div class="container">
+                <input type="password"
+                placeholder="Password"
+                class="form-control"
+                required>
+                
+                <div class="container">
+                    <input type="text"
+                    placeholder="Bookmarks and Notes"
+                    class="form-control"
+                    required>
+<!-- More details page -->
+<h1>More Details</h1>
+
+<h2>Hattun Agency</h2>
+
+<p1>Opening times: Mon-Fri 8:00am - 6:00pm</p1>
+<p1>Location: Carlsen Lane BS17 FG6</p1>
+<p2>www.HattunAgency.co.uk</p2>
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>
