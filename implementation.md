@@ -2,15 +2,15 @@
 
 
 ## Introduction
-Dataset Description - The system for the debt advice agencies implements structured data from multiple sources. These include: 
+Dataset Description - The system for debt advice agencies implements structured data from multiple sources. These include: 
  * Primary Data Sources - Open Gov Data (this provides publically available debt agency records), and direct content from the debt agencies.
- * Dataset  Structure - User Data Table (This stores the users notes,and bookmarks), System Configurations Table(This stores the themes, and filtering options), and Debt Agencies Table (This stores the agencies details such as name, location, availability, and contact info).
+ * Dataset  Structure - User Data Table (This stores the user's notes, and bookmarks), System Configurations Table(This stores the themes, and filtering options), and Debt Agencies Table (This stores the agency details such as name, location, availability, and contact info).
 
 The current issues that the system has deals with data accuracy and updates that occur, as the agencies change their contact details, location, and services. Thus some information on the site can become outdated, requiring constant updates. The other potential issue we have to face is scalability because if the user base grows rapidly, the hosting requirements and system performance may need to be expanded.
 
 ### Configuration Data 
  * User Preferences: UI themes (light/dark mode), and font size customization
- * Map and Location Settings: API keys for map intergration (Mapbox) and the default city, Bristol
+ * Map and Location Settings: API keys for map integration (Mapbox) and the default city, Bristol
  * Filters and Search Settings: Filter options (e.g., availability and postcode) and sorting options (e.g., most affordable, and highly rated)
  * Admin Settings: moderation rules for agency updates 
 
@@ -25,16 +25,16 @@ Project Folder Structure for the Debt Advice Agency Finder System
     └── 📁Group project
         └── 📁code 
             └── 📁app   //this is the folder for all the implementation files
-                └── index.html  //The main html page for the implementation stage which contains the listings of agencies
+                └── index.html  //The main HTML page for the implementation stage which contains the listings of agencies
                 └── pages.html
-                └── script.js //The JavaScript file containing the functions that make the html pages interactive
-                └── style.css   //The styling sheet for the html pages
+                └── script.js //The JavaScript file containing the functions that make the HTML pages interactive
+                └── style.css   //The styling sheet for the HTML pages
                 └── toc.html 
-            └── 📁mockup   //this is the folder for all the mock up files
+            └── 📁mockup   //this is the folder for all the mockup files
                 └── mockup.html     //The static page version for the website
                 └── script.js
                 └── style.css
-            └── 📁prototype     //this is the folder for all the prototypes files
+            └── 📁prototype     //this is the folder for all the prototype files
                 └── map.html
                 └── profile.html
                 └── prototype.html
@@ -63,11 +63,10 @@ Project Folder Structure for the Debt Advice Agency Finder System
 
 
 provide a table listing the number of jslint warnings/reports for each module.
-
-Strings must use doublequote.  (quotes)
-
+This came up:
 'closeModal' is defined but never used.  (no-unused-vars)
 Remove unused variable 'closeModal'.
+ * However, the closeModal function has been implemented in the index.html code.
 
 'showSection' is defined but never used.  (no-unused-vars)
 Remove unused variable 'showSection'.
