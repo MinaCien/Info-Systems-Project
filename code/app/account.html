@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Author: Wilhelmina Acheampong -->
+<!-- Table of Content Implementation Page -->
+
+    <head>
+        <title>Debt Advice Agency Finder</title>
+        <link rel="stylesheet" href="style.css">       
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <div id="container">
+            <header>
+                <span class="heading">Debt Advice Agency Finder</span>
+                <form id="search" action="toc.html">
+                    <input placeholder="search...">
+                    <button><i class="fa fa-search"></i></button>
+                </form>
+            </header>
+            
+
+            <nav>
+                <button onclick="location.href='' " class="w3-bar-item w3-button w3-block w3-black w3-border w3-border-white">Find Data By: </button>
+                <button onclick=" location.href='map.html' " class="w3-button w3-block w3-purple w3-border w3-border-white">Maps &amp; Directions</button>
+                <button onclick="document.getElementById('single').setAttribute('show','third')" class="w3-button w3-block w3-purple w3-border w3-border-white">Table of Content</button>
+            </nav>
+
+            <!-- Main Section - Body for maps and contents -->
+            <main >
+                <main id="single" show="third">
+                    <div id="first"> 
+                      <div class="w3-bar">
+                        <button class="w3-block w3-purple w3-bar-item w3-button w3-border">Postcode</button>
+                        <button onclick="document.getElementById('single').setAttribute('show','second')" class="w3-bar-item w3-button w3-border">My Account</button>
+                      </div>
+
+                      <!-- Apply filters dropdown list-->
+                      <div>
+                        <label for="filterSelect">Apply Filters: </label>
+                        <select id="filterSelect">
+
+                          <option value="availablility">Availability</option>
+                          <option value="postcode">Postcode</option>
+                        </select>
+                        <input type="text" id="filterInput" placeholder="Enter filter value">
+                        <button id="applyFilterBtn">Apply</button>
+                      </div>
+
+                      <div id="Postcode">
+                        <iframe src="https://arcg.is/1j11ae2" width="800" height="600" frameborder="200" ></iframe>
+                      </div>
+                    </div>
+            
+                    <div id="second">
+                      <div class="w3-bar">
+                        <button onclick="document.getElementById('single').setAttribute('show','first')" class="w3-bar-item w3-button w3-border">Postcode</button>
+                        <button class="w3-bar w3-purple w3-bar-item w3-button w3-border">My Account</button>
+                      </div>
+
+                      <!-- Apply filters dropdown list-->
+                      <div>
+                        <label for="filterSelect">Apply Filters: </label>
+                        <select id="filterSelect">
+                          <option value="availablility">Availability</option>
+                          <option value="postcode">Postcode</option>
+                        </select>
+                        <input type="text" id="filterInput" placeholder="Enter filter value">
+                        <button id="applyFilterBtn">Apply</button>
+                      </div>
+                      
+                      <!-- My Account Page-->
+                      <div id="My Account">
+                                  
+                        <div class="pro-container">
+                          <!--Profile section-->
+                          <div class="profile">
+                            <img src=" " alt="Profile Image">
+                            <div class="profile-info">
+                              <h2>Kent Brighton</h2>
+                              <p>Email: kentbrighton@agency.com</p>
+                              <p>Phone number: 0000000001</p>
+                            </div>
+                          </div>
+                          
+                          <!--Bookmark Section-->
+                          <div class="section">
+                            <h3>BOOKMARKS</h3>
+                            <iframe src="https://arcg.is/0CjbqS1" width="800" height="230" frameborder="200"></iframe>
+            
+                            <ul class="book-list" id="bookmarkList">
+                              <li>Hattun Agency <button onclick="removeBookmark(this)">Remove</button> </li>
+                              <li>Icon Agency <button onclick="removeBookmark(this)">Remove</button> </li>
+                            </ul>
+                            <button class="add-btn" onclick="addBookmark()"> +Add Bookmark</button>
+                          </div>
+            
+                          <!--Notes Section-->
+                          <div class="section">
+                            <h3>NOTES</h3>
+                            <textarea class="notes" id="userNotes" rows="4" cols="50" placeholder="Write your notes here..."></textarea>
+                          </div>
+                        </div>
+                      
+                      </div>
+            
+                    </div>
+
+                <div id="third">
+                    <div class="w3-bar">
+                        <button onclick="document.getElementById('single').setAttribute('show','first')" class="w3-bar-item w3-button w3-border">Postcode</button>
+                        <button onclick="document.getElementById('single').setAttribute('show','second')" class="w3-bar-item w3-button w3-border">My Account</button>
+                    </div>
+
+                    <!-- Apply filters dropdown list-->
+                    <div>
+                      <label for="filterSelect">Apply Filters: </label>
+                      <select id="filterSelect">
+                        <option value="availablility">Availability</option>
+                        <option value="postcode">Postcode</option>
+                      </select>
+                      <input type="text" id="filterInput" placeholder="Enter filter value">
+                      <button id="applyFilterBtn">Apply</button>
+                    </div>
+
+                    </div>
+                    <div id="Table of Content">
+                    <iframe src="https://arcg.is/0CjbqS1" width="800" height="800"></iframe>
+                    </div>
+                </div>    
+
+            </main>
+        </div>
+    </body>
+</html>
