@@ -5,9 +5,26 @@ padding: 40px;
 font-family: 'Roboto mono', Courier, monospace;
 }
 
-.container{
+h1{
+    color: blueviolet;
+}
+
+.container .form-control{
 text-align: center;
-padding: 40px;
+margin: auto;
+margin-top: 20px;
+margin-bottom: 20px;
+padding: 10px;
+border-radius: 1em;
 font-family: 'Roboto mono', Courier, monospace;
+}
+
+.pill{
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 50px;
+    border-radius: 1em;
+    
+    
 }
 
