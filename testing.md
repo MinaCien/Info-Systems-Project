@@ -24,11 +24,11 @@ FR6. 'My account' option (UC6)
 
 ### Test 2
 
-| Use-Case ID | Requirement ID  | Test Case  | Status |
-| ----------- | --------------- | ---------- | ------ |
-| UC1         | FR1             | index.html | Pass   |
-| UC2         | FR2             | index.html | Pass   |
-| UC3         | FR3             | index.html | Pass   |
-| UC4         | FR4             | index.html | Pass   |
-| UC5         | FR5             | index.html | Pass   |
-| UC6         | FR6             | index.html | Pass   |
+| Use-Case ID | Requirement ID  | Test Case             | Status   |
+| ----------- | --------------- | --------------------- | -------- |
+| UC1         | FR1             | index.html + map.html | Pass     |
+| UC2         | FR2             | index.html            | Pass     |
+| UC3         | FR3             | index.html            | Pass     |
+| UC4         | FR4             | index.html            | Pass     |
+| UC5         | FR5             | index.html            | Pass     |
+| UC6         | FR6             | account.html          | Pass     |
