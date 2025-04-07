@@ -86,7 +86,7 @@ External Services -  Open Data Bristol and Mapbox: Open Data provides sructured 
 ## Bristol Open Data API
 TODO: Document each query to Bristol Open Data
 
-**Query URL Link:** [Postcode Query](https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_community_and_safety/MapServer/18/query?where=1%3D1&outFields=LOCATION_NAME,FULL_ADDRESS,SERVICE_NAME,TELEPHONE,EMAIL&outSR=4326&f=json)
+**Query URL Link:** [Query](https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_community_and_safety/MapServer/18/query?where=1%3D1&outFields=LOCATION_NAME,FULL_ADDRESS,SERVICE_NAME,TELEPHONE,EMAIL&outSR=4326&f=json)
 ![UML Class diagrams representing JSON query results](images/umldiagram.png)
 
 ![UML Class diagrams representing JSON query results for postcodes](images/postcodeuml.png)
