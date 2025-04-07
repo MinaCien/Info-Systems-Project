@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Author: Wilhelmina Acheampong -->
+<!-- Table of Content Implementation Page -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Debt Advice Agency Finder</title>
+    
+    <!-- External CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- icon links -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- W3 CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <div class="container">
+      <header>
+        <span class="heading">Debt Advice Agency Finder</span>
+        <form id="search">
+          <input id="searchInput" type="text" placeholder="search...">
+          <button type="button" id="searchBtn"><i class="fa fa-search"></i></button>
+        </form>
+        <label class="switch" >
+            <input type="checkbox" id="themeToggle">
+            <span class="slider"></span>
+        </label>
+        
+      </header>
+
+        <nav>
+          <button class="w3-bar-item w3-button w3-block w3-black w3-border w3-border-white">Find Data By: </button>
+          <button onclick=" location.href='map.html' " class=" w3-bar-item w3-button w3-block w3-purple w3-border w3-border-white">Maps &amp; Directions</button>
+          <button onclick="document.getElementById('single').setAttribute('show','third')" class="w3-bar-item w3-button w3-block w3-purple w3-border w3-border-white">Table of Content</button>
+        </nav>
+
+
+        <!-- Main Section - Body for maps and contents -->
+        <main id="single" show="third">
+              <div id="first"> 
+                <div class="w3-bar">
+                  <button class="w3-block w3-purple w3-bar-item w3-button w3-border">Postcode</button>
+                  <button onclick="document.getElementById('single').setAttribute('show','second')" class="w3-bar-item w3-button w3-border">My Account</button>
+                </div>
+
+                <!-- Apply filters dropdown list-->
+                <div>
+                  <label for="filterSelect">Apply Filters: </label>
+                  <select id="filterSelect">
+                    <option value="all">All</option>
+                    <option value="availablility">Availability</option>
+                    <option value="postcode">Postcode</option>
+                  </select>
+                  <input type="text" id="filterInput" placeholder="Enter filter value">
+                  <button type="button" id="applyFilterBtn">Apply</button>
+                </div>
+
+                <div id="Postcode">
+                  <iframe src="https://arcg.is/1j11ae2" width="800" height="600" frameborder="200" ></iframe>
+                </div>
+              </div>
+      
+              <div id="second">
+                <div class="w3-bar">
+                  <button onclick="document.getElementById('single').setAttribute('show','first')" class="w3-bar-item w3-button w3-border">Postcode</button>
+                  <button class="w3-bar w3-purple w3-bar-item w3-button w3-border">My Account</button>
+                </div>
+
+                <!-- Apply filters dropdown list-->
+                <div>
+                  <label for="filterSelect">Apply Filters: </label>
+                  <select id="filterSelect">
+                    <option value="all">All</option>
+                    <option value="availablility">Availability</option>
+                    <option value="postcode">Postcode</option>
+                  </select>
+                  <input id="filterInput" placeholder="Enter filter value">
+                  <button id="applyFilterBtn">Apply</button>
+                </div>
+                
+                <div id="My Account">
+                            
+                  <div class="pro-container">
+                    <!--Profile section-->
+                    <div class="profile">
+                      <img src=" " alt="Profile Image">
+                      <div class="profile-info">
+                        <h2>Kent Brighton</h2>
+                        <p>Email: kentbrighton@agency.com</p>
+                        <p>Phone number: 0000000001</p>
+                      </div>
+                    </div>
+                    
+                    <!--Bookmark Section-->
+                    <div class="section">
+                      <h3>BOOKMARKS</h3>
+                      <div id="bookmarkSection"></div>
+                      <button class="add-Btn" onclick="window.location.href='index.html' ">+ Add more...</button>
+                    </div>
+      
+                    <!--Notes Section-->
+                    <div class="section">
+                      <h3>NOTES</h3>
+                      <textarea class="notes" id="userNotes" rows="4" cols="50" placeholder="Write your notes here..."></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="third">
+                  <div class="w3-bar">
+                    <button onclick="document.getElementById('single').setAttribute('show','first')" class="w3-bar-item w3-button w3-border">Postcode</button>
+                    <button onclick="document.getElementById('single').setAttribute('show','second')" class="w3-bar-item w3-button w3-border">My Account</button>
+                  </div>
+
+                  <!-- Apply filters dropdown list-->
+                  <div>
+                    <label for="filterSelect">Apply Filters: </label>
+                    <select id="filterSelect">
+                      <option value="all">All</option>
+                      <option value="availablility">Availability</option>
+                      <option value="postcode">Postcode</option>
+                    </select>
+                    <input id="filterInput" placeholder="Enter filter value">
+                    <button id="applyFilterBtn">Apply</button>
+                  </div>
+
+                  <div id="Table of Content">
+                    <h2>Available Debt Advice Agencies</h2>
+                    <div class="toc-container">
+
+                        <table class="w3-table w3-bordered" style="width: 600px; height: 400px; border: 1px solid black;">
+                          <thead>
+                            <tr>
+                              <th>Location Name</th>
+                              <th>Full Address</th>
+                              <th>Service Name</th>
+                              <th>Telephone</th>
+                              <th>Email</th>
+                              <th>Availability</th>
+                              <th>Actions</th>
+                            </tr>
+                          </thead>
+                          <tbody id="results"></tbody>
+
+                          <tr>
+                            <td><button onclick="addToBookmarks('')">Bookmark</button> </td>
+                          </tr>
+                        </table>
+
+                        <!-- Modal for Details -->
+                            <div id="detailsModal" class="w3-modal">
+                                  <div class="w3-modal-content w3-padding">
+                                      <span class="w3-button w3-display-topright" onclick="closeModal()">&times;</span>
+                                      <h3 id="modalTitle"></h3>
+                                      <p><strong>Address:</strong> <span id="modalAddress"></span></p>
+                                      <p><strong>Service Name:</strong> <span id="modalService"></span></p>
+                                      <p><strong>Telephone:</strong> <span id="modalPhone"></span></p>
+                                      <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+                                      <p><strong>Availability:</strong></p>
+                                      <a id="mapboxLink" class="w3-button w3-purple w3-margin-top" target="_blank">Get Directions</a>
+                                  </div>
+                            </div>
+                    </div>
+                  </div>
+              </div>
+            </main>
+    </div>
+
+    
+    
+    <!--Link to JavaScript-->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
